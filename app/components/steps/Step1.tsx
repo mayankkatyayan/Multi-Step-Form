@@ -36,13 +36,13 @@ export default function Step1() {
 
 
   return (
-    <div>
-      <h2 className="text-xl font-bold mb-4">Personal Information</h2>
+    <div className="p-6 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-lg shadow-lg dark:bg-neutral-900">
+      <h2 className="text-xl font-bold text-indigo-700 dark:text-indigo-400 mb-4">Personal Information</h2>
       <form className="space-y-4" onSubmit={(e) => {
           e.preventDefault();
         }} >
         <div>
-          <label className="block text-sm font-medium">Full Name</label>
+          <label className="block text-sm font-medium text-gray-800 dark:text-neutral-200 mb-2">Full Name</label>
           <Tooltip>
             <TooltipTrigger>
             <input
@@ -51,15 +51,15 @@ export default function Step1() {
                 value={formValues.fullName}
                 onChange={handleChange}
                 placeholder="Enter your full name"
-                className="mt-1 block w-full rounded border-gray-300 shadow-sm focus:ring focus:ring-blue-500 focus:outline-none"
+                className="mt-1 block w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:outline-none shadow-sm dark:border-neutral-600 dark:bg-neutral-800 dark:text-neutral-100"
               />
             </TooltipTrigger>
             <TooltipContent>Provide your complete name as it appears on official documents.</TooltipContent>
           </Tooltip>
-           {errors.fullName && <p className="text-red-500 text-sm">{errors.fullName}</p>}
+           {errors.fullName && <p className="text-red-500 text-sm mt-2">{errors.fullName}</p>}
         </div>
         <div>
-          <label className="block text-sm font-medium">Email Address</label>
+          <label className="block text-sm font-medium text-gray-800 dark:text-neutral-200 mb-2">Email Address</label>
           <Tooltip>
             <TooltipTrigger>
               <input
@@ -68,12 +68,12 @@ export default function Step1() {
                 value={formValues.email}
                 onChange={handleChange}
                 placeholder="Enter your email address"
-                className="mt-1 block w-full rounded border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                className="mt-1 block w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:outline-none shadow-sm dark:border-neutral-600 dark:bg-neutral-800 dark:text-neutral-100"
               />
             </TooltipTrigger>
             <TooltipContent>Ensure this is a valid email you check frequently.</TooltipContent>
           </Tooltip>
-           {errors.email && <p className="text-red-500 text-sm">{errors.email}</p>}
+           {errors.email && <p className="text-red-500 text-sm mt-2">{errors.email}</p>}
         </div>
       </form>
     </div>

@@ -3,6 +3,7 @@
 import { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip';
 import { useFormStore } from '../../store/formStore';
 import { useToast } from '../ui/ToastContext';
+import { Button } from '../ui/button';
 
 export default function Step4() {
   const { stepData } = useFormStore();
@@ -15,7 +16,7 @@ export default function Step4() {
   
 
   return (
-    <div>
+    <div className='p-6 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-lg shadow-lg dark:bg-neutral-900'>
       <h2 className="text-xl font-bold mb-4">Review & Submit</h2>
       <p className="text-gray-700">Here is a summary of your information:</p>
 
@@ -40,12 +41,13 @@ export default function Step4() {
       <div className="mt-6">
         <Tooltip>
           <TooltipTrigger asChild>
-            <button
+            <Button
+            type = "button" 
               onClick={handleSubmit}
               className="mt-4 px-4 py-2 bg-blue-500 text-white rounded shadow hover:bg-blue-600"
             >
               Submit
-            </button>
+            </Button>
           </TooltipTrigger>
           <TooltipContent>
             Click to submit your information and complete the process.

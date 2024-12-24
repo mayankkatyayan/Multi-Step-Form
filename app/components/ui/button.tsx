@@ -38,15 +38,15 @@ export interface ButtonProps
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   ({ className, variant, size, asChild = false, ...props }, ref) => {
-    const Comp = asChild ? Slot : (motion.button as React.ElementType); // Use motion.button for animations
+    const Comp = asChild ? Slot : (motion.button as React.ElementType); 
 
     return (
       <Comp
         className={cn(buttonVariants({ variant, size, className }))}
         ref={ref}
         {...props}
-        whileHover={{ scale: 1.05 }} // Hover animation (scale up)
-        whileTap={{ scale: 0.95 }}   // Tap animation (scale down)
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.95 }}   
       />
     )
   }

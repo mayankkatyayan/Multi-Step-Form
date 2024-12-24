@@ -34,13 +34,13 @@ export default function Step2() {
   }, [formValues]);
 
   return (
-    <div>
-      <h2 className="text-xl font-bold mb-4">Address Details</h2>
+    <div className="p-6 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-lg shadow-lg dark:bg-neutral-900">
+      <h2 className="text-xl font-bold text-indigo-700 dark:text-indigo-400 mb-4">Address Details</h2>
       <form className="space-y-4" onSubmit={(e) => {
     e.preventDefault(); 
   }} >
         <div>
-          <label className="block text-sm font-medium">Street Address</label>
+          <label className="block text-sm font-medium text-gray-800 dark:text-neutral-200 mb-2">Street Address</label>
           <Tooltip>
             <TooltipTrigger>
               <input
